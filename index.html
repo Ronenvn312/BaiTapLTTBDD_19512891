@@ -42,20 +42,26 @@
         document.body.appendChild(br1);
         document.body.appendChild(btnsum);
         document.body.appendChild(results);
+
         inp1.setAttribute('id', 'inp1');
-        inp1.setAttribute('id', 'inp2');
+        inp2.setAttribute('id', 'inp2');
         results.setAttribute('id', 'results');
         btnsum.setAttribute('id', 'btn_sum');
 
-        function tinhtong() {
-            var soA = parseInt(document.getElementById('inp1').value);
-            var soB = parseInt(document.getElementById('inp2').value);
-            return soA + sob;
-        }
-        document.getElementById('btn_sum').onclick = function() {
-            document.getElementById('results').innerHTML = tinhtong();
+       
+        document.getElementById("btn_sum").onclick = function() {
+            var soA = parseInt(document.getElementById("inp1").value);
+            var soB = parseInt(document.getElementById("inp2").value);
+            var sum = Number(soA + soB);
+            document.getElementById("results").innerHTML = sum;
+            console.log(tinhtong());
         };
     </script>
 </body>
 
 </html>
+<!--
+    git remote add origin https://github.com/Ronenvn312/BaiTapLTTBDD_19512891.git
+git branch -M main
+git push -u origin main
+-->
