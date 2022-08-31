@@ -47,15 +47,40 @@
         inp2.setAttribute('id', 'inp2');
         results.setAttribute('id', 'results');
         btnsum.setAttribute('id', 'btn_sum');
-
-       
-        document.getElementById("btn_sum").onclick = function() {
+        function tinhtong(){
             var soA = parseInt(document.getElementById("inp1").value);
             var soB = parseInt(document.getElementById("inp2").value);
             var sum = Number(soA + soB);
-            document.getElementById("results").innerHTML = sum;
+            return sum;
+        }
+
+       
+        document.getElementById("btn_sum").onclick = function() {
+           
+            document.getElementById("results").innerHTML = tinhtong();
             console.log(tinhtong());
         };
+//--------------------------------
+        var arr = [12,3,4,5];
+        function fc (element){
+            // console.log(element);
+            return element >= 4;
+        }
+        var a = arr.find(fc);
+        // console.log(a);
+//------------------------------
+        Array.prototype.find1 = function(callback) {
+            for(var a of this){
+                if(callback(element))
+                return element;
+            }
+            return undefined;
+        }
+        function check(element){
+            return element == 4;
+        }
+        var afin = arr.find1(check);
+        console.log(afin);
     </script>
 </body>
 
